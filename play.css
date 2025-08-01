@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+#score-display {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: cyan;
+  z-index: 10;
+}
+
+#game-container {
+  margin: 30px auto;
+  background-color: #111;
+  border: 3px solid #00ffff;
+  width: max-content;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+.grid-cell {
+  width: 100px;
+  height: 100px;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px #333;
+  position: relative;
+}
+
+.note-square {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: red;
+  border-radius: 6px;
+  box-shadow: 0 0 10px red;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(0.1);
+  opacity: 1;
+  z-index: 5;
+}
+
+.note-square.hold-ready {
+  outline: 4px solid #ffffff;
+  outline-offset: -2px;
+  z-index: 10;
+}
+
+.grid-cell.active {
+  background-color: #444;
+  box-shadow: 0 0 10px #888;
+  z-index: 2;
+}
