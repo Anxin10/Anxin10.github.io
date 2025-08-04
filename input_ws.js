@@ -16,8 +16,7 @@ function simulateKeyEvent(key, type = "keydown") {
 
 function setupInputWebSocket() {
   try {
-    socket = new WebSocket("ws://localhost:8765");
-
+    socket = new WebSocket("wss://icdc.onrender.com");
     socket.onopen = () => console.log("[WS] Connected");
     socket.onclose = () => console.log("[WS] Disconnected");
     socket.onerror = err => console.error("[WS] Error:", err);
@@ -52,3 +51,4 @@ function setupInputWebSocket() {
 document.addEventListener("DOMContentLoaded", () => {
   setupInputWebSocket();
 });
+
