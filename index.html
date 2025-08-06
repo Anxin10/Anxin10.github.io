@@ -1,65 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WebSocket 控制介面</title>
-  <style>
-    body {
-      background: #f4f4f7;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      color: #333;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-      font-size: 2em;
-      color: #4a4a4a;
-    }
-
-    .container {
-      background: white;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      min-width: 320px;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #4a90e2;
-      color: white;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #3a78c2;
-    }
-
-    .status {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #888;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>WebSocket 控制面板</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>WebSocket 控制面板</h1>
-    <button onclick="sendPing()">發送 PING</button>
-    <div class="status" id="status">尚未連線</div>
+    <h1>🎮 WebSocket 控制面板</h1>
+    <p id="status">🔄 連線中...</p>
+    <button onclick="sendPing()">🔁 發送 ping</button>
   </div>
 
   <script src="input_ws.js"></script>
