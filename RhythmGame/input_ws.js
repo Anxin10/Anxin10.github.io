@@ -26,7 +26,8 @@ function simulateKeyEvent(key, type = "keydown") {
 function setupInputWebSocket() {
   try {
     // 建立 WebSocket 連線。注意：路徑結尾需要加上 /ws
-    socket = new WebSocket("wss://icdc.onrender.com/ws");
+    socket = new WebSocket("wss://icdc-my-ws-demo-production.up.railway.app/ws");
+                           //wss://icdc.onrender.com/ws"
 
     // 設定連線、關閉、錯誤時的處理函式
     socket.onopen = () => console.log("[WS] 成功連線到伺服器");
