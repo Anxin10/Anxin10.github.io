@@ -26,10 +26,10 @@ function simulateKeyEvent(key, type = "keydown") {
 function setupInputWebSocket() {
   try {
     // 建立 WebSocket 連線。注意：路徑結尾需要加上 /ws
-    socket = new WebSocket("wss://57eb7299198c.ngrok-free.app/ws");
+    socket = new WebSocket("wss://web-production-07332.up.railway.app/ws");
                            //wss://icdc.onrender.com/ws"
                           //wss://icdc-my-ws-demo-production.up.railway.app/ws
- 
+                           //wss://57eb7299198c.ngrok-free.app/ws
     // 設定連線、關閉、錯誤時的處理函式
     socket.onopen = () => console.log("[WS] 成功連線到伺服器");
     socket.onclose = () => console.log("[WS] 與伺服器的連線已中斷");
